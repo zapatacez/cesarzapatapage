@@ -1,90 +1,260 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cesar Zapata - Developer & Consultant. +20 años de experiencia en C#, AWS, SQL, Automation y Logistics.">
+    <meta name="description" content="Cesar Zapata - Developer & Consultant. +20 years of experience in C#, AWS, SQL, Automation and Logistics.">
     <title>Cesar Zapata | Developer & Consultant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="12" fill="url(#logo-gradient)"/>
+                        <path d="M14 18C14 16.8954 14.8954 16 16 16H20C23.3137 16 26 18.6863 26 22C26 25.3137 23.3137 28 20 28H16C14.8954 28 14 27.1046 14 26V18Z" fill="white"/>
+                        <path d="M28 32V24C28 20.6863 30.6863 18 34 18C35.1046 18 36 18.8954 36 20V20C36 21.1046 35.1046 22 34 22C32.8954 22 32 22.8954 32 24V32C32 33.1046 31.1046 34 30 34C28.8954 34 28 33.1046 28 32Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#6366f1"/>
+                                <stop offset="1" stop-color="#8b5cf6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-bg-animation"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Cesar Zapata</h1>
+                <div class="hero-badge">Available for new projects</div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Cesar Zapata</span>
+                </h1>
                 <p class="hero-subtitle">Developer & Technology Consultant</p>
-                <p class="hero-description">Transformando ideas en soluciones tecnológicas con más de 20 años de experiencia</p>
-                <a href="#contact" class="cta-button">Trabajemos Juntos</a>
+                <p class="hero-description">Transforming ideas into scalable technology solutions with over 20 years of experience in enterprise development</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="cta-button primary">Let's Work Together</a>
+                    <a href="#expertise" class="cta-button secondary">View Expertise</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Projects Delivered</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Core Technologies</div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="scroll-indicator"></div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Sobre Mí</h2>
-            <p class="about-text">
-                Con más de 20 años de experiencia en desarrollo de software y consultoría tecnológica,
-                ayudo a empresas a optimizar sus procesos y construir soluciones robustas y escalables.
-            </p>
+            <div class="about-content">
+                <div class="about-text-col">
+                    <div class="section-label">About Me</div>
+                    <h2 class="section-title-left">Building technology solutions that drive business growth</h2>
+                    <p class="about-text">
+                        With over 20 years of experience in software development and technology consulting,
+                        I help companies optimize their processes and build robust, scalable solutions.
+                    </p>
+                    <p class="about-text">
+                        My approach combines deep technical expertise with a clear understanding of business objectives,
+                        ensuring that every solution not only works flawlessly but also generates real value.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-tag">Enterprise Solutions</div>
+                        <div class="feature-tag">Cloud Architecture</div>
+                        <div class="feature-tag">Process Automation</div>
+                    </div>
+                </div>
+                <div class="about-image-col">
+                    <div class="about-card">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="code-line"><span class="keyword">const</span> expertise = {</div>
+                            <div class="code-line indent">languages: <span class="string">['C#', 'SQL']</span>,</div>
+                            <div class="code-line indent">cloud: <span class="string">['AWS']</span>,</div>
+                            <div class="code-line indent">focus: <span class="string">['Automation', 'Logistics']</span>,</div>
+                            <div class="code-line indent">experience: <span class="number">20+</span> years</div>
+                            <div class="code-line">};</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Expertise Section -->
-    <section class="expertise">
+    <section id="expertise" class="expertise">
         <div class="container">
-            <h2 class="section-title">Áreas de Expertise</h2>
+            <div class="section-header">
+                <div class="section-label">What I Do Best</div>
+                <h2 class="section-title">Areas of Expertise</h2>
+                <p class="section-subtitle">Technologies and domains where I deliver exceptional results</p>
+            </div>
             <div class="expertise-grid">
                 <div class="expertise-card">
-                    <div class="card-icon">💻</div>
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
                     <h3>C# Development</h3>
-                    <p>Desarrollo de aplicaciones enterprise con .NET y C#</p>
+                    <p>Enterprise application development with .NET and C#, robust APIs and scalable architectures</p>
+                    <div class="card-tech">
+                        <span>.NET Core</span>
+                        <span>ASP.NET</span>
+                        <span>Entity Framework</span>
+                    </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="card-icon">☁️</div>
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                    </div>
                     <h3>AWS Cloud</h3>
-                    <p>Arquitectura y deployment en Amazon Web Services</p>
+                    <p>Architecture and deployment on Amazon Web Services, infrastructure as code and DevOps</p>
+                    <div class="card-tech">
+                        <span>EC2</span>
+                        <span>Lambda</span>
+                        <span>S3</span>
+                    </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="card-icon">🗄️</div>
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                    </div>
                     <h3>SQL & Databases</h3>
-                    <p>Diseño y optimización de bases de datos</p>
+                    <p>Design and optimization of relational databases, data modeling and performance tuning</p>
+                    <div class="card-tech">
+                        <span>SQL Server</span>
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                    </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="card-icon">⚙️</div>
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
                     <h3>Automation</h3>
-                    <p>Automatización de procesos y workflows</p>
+                    <p>Process and workflow automation, CI/CD pipelines and advanced scripting</p>
+                    <div class="card-tech">
+                        <span>PowerShell</span>
+                        <span>GitHub Actions</span>
+                        <span>Azure DevOps</span>
+                    </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="card-icon">📦</div>
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16.5 9.4l-9-5.19"></path>
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
                     <h3>Logistics</h3>
-                    <p>Soluciones tecnológicas para logística y supply chain</p>
+                    <p>Technology solutions for logistics and supply chain, WMS and traceability systems</p>
+                    <div class="card-tech">
+                        <span>WMS</span>
+                        <span>Tracking</span>
+                        <span>Integration</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Servicios de Consultoría</h2>
-            <div class="services-list">
+            <div class="section-header">
+                <div class="section-label">How I Can Help</div>
+                <h2 class="section-title">Consulting Services</h2>
+            </div>
+            <div class="services-grid">
                 <div class="service-item">
-                    <h3>Consultoría Técnica</h3>
-                    <p>Asesoría experta para tomar decisiones tecnológicas acertadas</p>
+                    <div class="service-number">01</div>
+                    <h3>Technical Consulting</h3>
+                    <p>Expert advice to make the right technology decisions, architecture evaluation and technology roadmaps</p>
+                    <ul class="service-list">
+                        <li>Technology Assessment</li>
+                        <li>Architecture Review</li>
+                        <li>Technical Strategy</li>
+                    </ul>
                 </div>
                 <div class="service-item">
-                    <h3>Desarrollo de Software</h3>
-                    <p>Creación de soluciones a medida para tu negocio</p>
+                    <div class="service-number">02</div>
+                    <h3>Software Development</h3>
+                    <p>Custom solutions for your business, from MVPs to complex enterprise systems</p>
+                    <ul class="service-list">
+                        <li>Custom Development</li>
+                        <li>API Integration</li>
+                        <li>Legacy Modernization</li>
+                    </ul>
                 </div>
                 <div class="service-item">
-                    <h3>Optimización de Procesos</h3>
-                    <p>Mejora de eficiencia mediante automatización y mejores prácticas</p>
+                    <div class="service-number">03</div>
+                    <h3>Process Optimization</h3>
+                    <p>Efficiency improvements through automation and best practices, reducing operational costs</p>
+                    <ul class="service-list">
+                        <li>Process Automation</li>
+                        <li>CI/CD Implementation</li>
+                        <li>Performance Optimization</li>
+                    </ul>
                 </div>
                 <div class="service-item">
-                    <h3>Arquitectura Cloud</h3>
-                    <p>Diseño e implementación de infraestructura en la nube</p>
+                    <div class="service-number">04</div>
+                    <h3>Cloud Architecture</h3>
+                    <p>Cloud infrastructure design and implementation, AWS migration and cost optimization</p>
+                    <ul class="service-list">
+                        <li>Cloud Migration</li>
+                        <li>Infrastructure as Code</li>
+                        <li>Cost Optimization</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -93,16 +263,111 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <p class="contact-text">¿Tienes un proyecto en mente? Me encantaría escucharte.</p>
-            <a href="mailto:contact@cesarzapata.com" class="contact-email">contact@cesarzapata.com</a>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="section-label light">Get in Touch</div>
+                    <h2 class="section-title-left light">Ready to take your project to the next level?</h2>
+                    <p class="contact-text">
+                        I would love to learn more about your project and how I can help you achieve your technology goals.
+                    </p>
+                    <div class="contact-features">
+                        <div class="contact-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>Response within 24h</span>
+                        </div>
+                        <div class="contact-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Flexible scheduling</span>
+                        </div>
+                        <div class="contact-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <span>Free consultation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-inner">
+                        <h3>Let's Connect</h3>
+                        <p>Contact me directly</p>
+                        <a href="mailto:contact@cesarzapata.com" class="contact-email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            contact@cesarzapata.com
+                        </a>
+                        <div class="contact-divider">
+                            <span>or</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Cesar Zapata. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="12" fill="url(#footer-logo-gradient)"/>
+                            <path d="M14 18C14 16.8954 14.8954 16 16 16H20C23.3137 16 26 18.6863 26 22C26 25.3137 23.3137 28 20 28H16C14.8954 28 14 27.1046 14 26V18Z" fill="white"/>
+                            <path d="M28 32V24C28 20.6863 30.6863 18 34 18C35.1046 18 36 18.8954 36 20V20C36 21.1046 35.1046 22 34 22C32.8954 22 32 22.8954 32 24V32C32 33.1046 31.1046 34 30 34C28.8954 34 28 33.1046 28 32Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#6366f1"/>
+                                    <stop offset="1" stop-color="#8b5cf6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+                    <p>Building technology solutions that drive business growth</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#expertise">Expertise</a></li>
+                            <li><a href="#services">Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cesar Zapata. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 </body>
