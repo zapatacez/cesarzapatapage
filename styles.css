@@ -15,7 +15,7 @@
     --primary-dark: #4f46e5;
     --primary-light: #818cf8;
     --secondary: #8b5cf6;
-    
+
     /* Neutrals */
     --dark: #0f172a;
     --dark-lighter: #1e293b;
@@ -29,7 +29,7 @@
     --gray-200: #e2e8f0;
     --gray-100: #f1f5f9;
     --white: #ffffff;
-    
+
     /* Shadows */
     --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     --shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
@@ -132,42 +132,49 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
 }
 
- .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-        .hero-profile-pic {
-            margin-bottom: 24px;
-        }
+.hero-profile-pic {
+    margin-bottom: 24px;
+}
 
-        .hero-profile-pic img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid rgba(99, 102, 241, 0.3);
-            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.3);
-        }
+.hero-profile-pic img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(99, 102, 241, 0.3);
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.3);
+}
 
-        .hero-badge {
-            display: inline-block;
-            padding: 8px 16px;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 50px;
-            color: var(--primary-light);
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 24px;
-        }
+.hero-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 50px;
+    color: var(--primary-light);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
 
 .hero-title {
     font-size: clamp(2.5rem, 6vw, 4rem);
@@ -315,9 +322,17 @@ section {
     border-radius: 50%;
 }
 
-.card-dots span:nth-child(1) { background: #ef4444; }
-.card-dots span:nth-child(2) { background: #f59e0b; }
-.card-dots span:nth-child(3) { background: #10b981; }
+.card-dots span:nth-child(1) {
+    background: #ef4444;
+}
+
+.card-dots span:nth-child(2) {
+    background: #f59e0b;
+}
+
+.card-dots span:nth-child(3) {
+    background: #10b981;
+}
 
 .card-body {
     padding: 32px 24px;
@@ -335,9 +350,17 @@ section {
     padding-left: 24px;
 }
 
-.keyword { color: #c792ea; }
-.string { color: #c3e88d; }
-.number { color: #f78c6c; }
+.keyword {
+    color: #c792ea;
+}
+
+.string {
+    color: #c3e88d;
+}
+
+.number {
+    color: #f78c6c;
+}
 
 /* ============================================
    EXPERTISE SECTION
@@ -411,6 +434,61 @@ section {
     border-radius: 6px;
     font-size: 13px;
     font-weight: 500;
+}
+
+/* ============================================
+   EMBEDS SECTION
+   ============================================ */
+
+.embeds {
+    background: var(--white);
+}
+
+.embeds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    justify-items: center;
+}
+
+.embed-slot {
+    width: 100%;
+    max-width: 550px;
+    background: var(--gray-100);
+    border-radius: 16px;
+    border: 1px solid var(--gray-200);
+    padding: 24px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.embed-slot:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.embed-slot-inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Make Twitter embeds fill the card nicely */
+.embed-slot .twitter-tweet,
+.embed-slot twitter-widget {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+/* Hide empty slots */
+.embed-slot.empty {
+    display: none;
+}
+
+/* Center grid when only 1 or 2 items */
+.embeds-grid {
+    justify-content: center;
 }
 
 /* ============================================
@@ -523,6 +601,14 @@ section {
     .expertise-grid {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+
+    .embeds-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .embed-slot {
+        max-width: 100%;
     }
 
     .expertise-card {
